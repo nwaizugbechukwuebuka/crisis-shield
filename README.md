@@ -1,73 +1,94 @@
-# Welcome to your Lovable project
+# Secure Crisis Communications: Protecting SaaS During Geopolitical Conflict
 
-## Project info
+## 📌 Overview
 
-**URL**: https://lovable.dev/projects/8dccf20d-18b9-4fae-b3a7-14963c434010
+This project simulates realistic cyber threats against an enterprise SaaS internal-communications platform during the Ukraine conflict. The goal is to:
 
-## How can I edit this code?
+- Identify vulnerabilities through controlled penetration testing.
+- Apply secure software craftsmanship to harden CI/CD, authentication, and data integrity.
+- Demonstrate curiosity-driven research into emerging threats such as misinformation, phishing, and supply-chain attacks.
 
-There are several ways of editing your application.
+⚠ **Ethical note**: All simulations are performed in contained environments. No real-world targets are affected.
 
-**Use Lovable**
+## 🎯 Objectives
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8dccf20d-18b9-4fae-b3a7-14963c434010) and start prompting.
+- Simulate attacker tactics seen during geopolitical crises: phishing, misinformation, CI/CD compromise, and DDoS.
+- Assess vulnerabilities in a Dockerized sample SaaS communication platform.
+- Harden authentication, CI/CD pipelines, and content distribution integrity.
+- Develop SIEM rules, incident response playbooks, and secure deployment artifacts.
+- Demonstrate forward-looking research into emerging attack vectors (e.g., deepfake-enhanced social engineering).
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🔍 Scenario Context
 
-**Use your preferred IDE**
+During the Ukraine war, enterprises faced increased phishing, supply-chain attacks, and misinformation campaigns.
+In this project, I recreated a controlled simulation of how attackers could attempt to:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Steal employee credentials via spear-phishing.
+- Spread false or malicious content through compromised accounts.
+- Exploit insecure CI/CD pipelines to inject backdoors.
+- Disrupt availability with targeted DDoS.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ⚙ Methodology
 
-Follow these steps:
+### Phase 1 — Threat Modeling
+- **Attacker personas**: APT phishing actor, hacktivist DDoS group.
+- **Assets**: Employee accounts, admin tokens, CI/CD pipeline.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Phase 2 — Penetration Testing (Controlled)
+- Spear-phishing simulation in lab.
+- Credential/session theft in a test environment.
+- Simulated CI/CD compromise using unsigned dependencies.
+- Availability testing with safe, containerized DDoS simulation.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Phase 3 — Secure Software Craftsmanship
+- Enforced MFA & short-lived tokens.
+- CI/CD hardening: dependency pinning, artifact signing, least-privilege runners.
+- Content authenticity checks (signed messages).
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Phase 4 — Detection & Response
+- SIEM rules for crisis-specific anomalies.
+- Playbooks for phishing, misinformation, and CI/CD alerts.
+- Crisis communication response framework.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Phase 5 — Curiosity & Research
+- Explored use of deepfake text/audio in phishing campaigns (lab-only).
+- Mapped TTPs to MITRE ATT&CK.
+- Considered GDPR implications for sensitive employee communications during crisis.
+
+## 📂 Repository Structure
+
+```
+secure-crisis-communications/
+│
+├── README.md
+├── report/                  # Final threat & penetration report
+├── playbooks/               # Incident response & comms playbooks
+├── sim-lab/                 # Dockerized SaaS app + vulnerable & hardened CI
+├── scripts/                 # MFA demo, token rotation, artifact signing
+├── siem/                    # Example SIEM rules & dashboards
+├── phishing-templates/      # Lab-only templates for phishing simulation
+├── docs/                    # MITRE mapping, GDPR notes, research appendix
+└── screenshots/             # Captured lab evidence
 ```
 
-**Edit a file directly in GitHub**
+## 📈 Business Impact
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Protects availability and trust of internal communications during crises.
+- Mitigates reputational and legal risks tied to misinformation or data leaks.
+- Strengthens supply-chain resilience for SaaS deployments.
+- Improves incident response maturity with custom playbooks and SIEM rules.
 
-**Use GitHub Codespaces**
+## 🧾 Key Learnings
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Crisis scenarios amplify phishing and misinformation effectiveness.
+- Secure CI/CD and artifact signing are essential to block backdoors.
+- Proactive research (deepfake awareness, APT simulations) sets apart a strong security engineer.
+- Technical findings must always map to business risk and resilience, not just vulnerabilities.
 
-## What technologies are used for this project?
+## 🛠 Skills Demonstrated
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8dccf20d-18b9-4fae-b3a7-14963c434010) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Penetration Testing** (Burp Suite, OWASP ZAP, Nmap, Metasploit)
+- **Secure Software Craftsmanship** (CI/CD hardening, MFA, artifact signing)
+- **Threat Intelligence** (MISP feeds, IOC enrichment)
+- **SIEM & Detection Engineering** (ELK/Splunk rules, anomaly detection)
+- **Research & Curiosity** (deepfake phishing, geopolitical threat mapping)
